@@ -19,6 +19,71 @@
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        /* Container for responsive layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Main content styling */
+        .main-content {
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: #831843;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #be185d;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        
+        .message {
+            font-size: 1.2rem;
+            color: #831843;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+        
+        /* Button styling with proper touch targets */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ec4899, #be185d);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+            min-height: 44px;
+            min-width: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
         }
         
         /* Floating Hearts Animation */
@@ -65,201 +130,144 @@
             }
         }
         
-        /* Wedding Rings */
-        .wedding-rings {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 30px;
-            color: #fbbf24;
-            z-index: 3;
-            animation: sparkle 2s infinite;
-        }
-        
-        @keyframes sparkle {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.1) rotate(10deg); }
-        }
-        
-        /* Floral Decorations */
-        .floral-corner {
-            position: absolute;
-            font-size: 60px;
-            color: #ec4899;
-            z-index: 2;
-        }
-        
-        .floral-top-left {
-            top: 10px;
-            left: 10px;
-            transform: rotate(-45deg);
-        }
-        
-        .floral-bottom-right {
-            bottom: 10px;
-            right: 10px;
-            transform: rotate(135deg);
-        }
-        
-        .floral-top-right {
-            top: 10px;
-            right: 80px;
-            transform: rotate(45deg);
-        }
-        
-        .floral-bottom-left {
-            bottom: 10px;
-            left: 10px;
-            transform: rotate(225deg);
-        }
-        
-        /* Main Container */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            position: relative;
-            z-index: 2;
-        }
-        
-        /* Card Design */
-        .wedding-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 60px 40px;
-            box-shadow: 0 20px 40px rgba(236, 72, 153, 0.2);
-            border: 3px solid #fbbf24;
-            position: relative;
-            backdrop-filter: blur(10px);
-        }
-        
-        .wedding-card::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: linear-gradient(45deg, #ec4899, #fbbf24, #ec4899);
-            border-radius: 25px;
-            z-index: -1;
-            opacity: 0.3;
-        }
-        
-        /* Header */
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .title {
-            font-family: 'Dancing Script', cursive;
-            font-size: 3.5em;
-            color: #ec4899;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(251, 191, 36, 0.3);
-        }
-        
-        .subtitle {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5em;
-            color: #fbbf24;
-            font-weight: 400;
-            font-style: italic;
-        }
-        
-        /* Message Content */
-        .message {
-            font-size: 1.3em;
-            line-height: 1.8;
-            color: #4a5568;
-            text-align: center;
-            margin-bottom: 30px;
-            font-weight: 400;
-        }
-        
-        /* Signature */
-        .signature {
-            text-align: right;
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.8em;
-            color: #ec4899;
-            margin-top: 30px;
-            font-weight: 700;
-        }
-        
-        /* Decorative Elements */
-        .heart-divider {
-            text-align: center;
-            font-size: 2em;
-            color: #ec4899;
-            margin: 30px 0;
-        }
-        
-        .love-banner {
-            background: linear-gradient(90deg, #ec4899, #fbbf24);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            text-align: center;
-            margin: 20px 0;
-            font-weight: 700;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
+        /* Mobile-first responsive design */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+            
             .container {
-                padding: 20px 10px;
+                padding: 15px;
             }
             
-            .wedding-card {
-                padding: 40px 20px;
+            .main-content {
+                padding: 30px 15px;
             }
             
-            .title {
-                font-size: 2.5em;
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+                line-height: 1.2;
             }
             
             .subtitle {
-                font-size: 1.2em;
+                font-size: 1.2rem;
+                margin-bottom: 30px;
             }
             
             .message {
-                font-size: 1.1em;
+                font-size: 1.1rem;
+                margin-bottom: 30px;
+                padding: 0 10px;
             }
             
-            .signature {
-                font-size: 1.5em;
+            .cta-button {
+                padding: 18px 35px;
+                font-size: 1rem;
+                min-height: 48px;
+                min-width: 120px;
             }
             
-            .floral-corner {
-                font-size: 40px;
+            .heart {
+                font-size: 16px;
             }
         }
         
-        /* Additional sparkle effect */
-        .sparkle {
-            position: absolute;
-            color: #fbbf24;
-            font-size: 20px;
-            animation: twinkle 1.5s infinite;
+        @media screen and (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .main-content {
+                padding: 20px 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+                margin-bottom: 25px;
+            }
+            
+            .message {
+                font-size: 1rem;
+                margin-bottom: 25px;
+                line-height: 1.6;
+            }
+            
+            .cta-button {
+                padding: 20px 40px;
+                font-size: 0.9rem;
+                min-height: 50px;
+                border-radius: 25px;
+                width: 100%;
+                max-width: 280px;
+            }
+            
+            .heart {
+                font-size: 14px;
+            }
         }
         
-        @keyframes twinkle {
-            0%, 100% { opacity: 0; transform: scale(0); }
-            50% { opacity: 1; transform: scale(1); }
+        @media screen and (max-width: 320px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .message {
+                font-size: 0.9rem;
+            }
+            
+            .cta-button {
+                padding: 18px 30px;
+                font-size: 0.85rem;
+            }
         }
         
-        .sparkle-1 { top: 15%; left: 15%; animation-delay: 0s; }
-        .sparkle-2 { top: 25%; right: 20%; animation-delay: 0.5s; }
-        .sparkle-3 { bottom: 30%; left: 10%; animation-delay: 1s; }
-        .sparkle-4 { bottom: 20%; right: 15%; animation-delay: 1.5s; }
+        /* Landscape orientation adjustments */
+        @media screen and (max-height: 500px) and (orientation: landscape) {
+            .main-content {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+            
+            .message {
+                font-size: 0.9rem;
+                margin-bottom: 20px;
+            }
+        }
+        
+        /* High DPI display support */
+        @media screen and (-webkit-min-device-pixel-ratio: 2),
+               screen and (min-resolution: 192dpi) {
+            .cta-button {
+                border: none;
+                outline: none;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Floating Hearts -->
     <div class="floating-hearts">
         <div class="heart">💖</div>
         <div class="heart">💕</div>
@@ -270,38 +278,16 @@
         <div class="heart">💗</div>
     </div>
     
-    <!-- Wedding Rings -->
-    <div class="wedding-rings">💍💍</div>
-    
-    <!-- Floral Decorations -->
-    <div class="floral-corner floral-top-left">🌸</div>
-    <div class="floral-corner floral-top-right">🌺</div>
-    <div class="floral-corner floral-bottom-left">🌻</div>
-    <div class="floral-corner floral-bottom-right">🌷</div>
-    
-    <!-- Sparkle Effects -->
-    <div class="sparkle sparkle-1">✨</div>
-    <div class="sparkle sparkle-2">⭐</div>
-    <div class="sparkle sparkle-3">✨</div>
-    <div class="sparkle sparkle-4">⭐</div>
-    
-    <!-- Main Container -->
     <div class="container">
-        <div class="wedding-card">
-            <div class="header">
-                <div class="title">Congratulations!</div>
-                <div class="subtitle">Wishing you love, joy & happiness</div>
-            </div>
-            
-            <div class="love-banner">💕 ✨ 💕</div>
-            
-            <div class="message">
-                Congratulations Karen! Hope you have an amazing holiday and celebration. Don't worry about things at work—I've got the fort covered! (Or at least, I'll try—you know how my group is!) And remember, pace yourselves on the cruise! 🚢🍹 The drinks are endless, but your liver isn't! 😄 Enjoy every minute. Wishing you both happiness, joy, and a well-deserved break!
-            </div>
-            
-            <div class="heart-divider">💖 💍 💖</div>
-            
-            <div class="signature">— Nathan</div>
+        <div class="main-content">
+            <h1>Congratulations Karen!</h1>
+            <p class="subtitle">On Your Beautiful Wedding Day</p>
+            <p class="message">
+                Wishing you and your partner a lifetime filled with love, laughter, and endless happiness. 
+                May your journey together be as beautiful as the love you share today. 
+                Here's to new beginnings, cherished moments, and a future bright with promise!
+            </p>
+            <a href="#" class="cta-button">Send Your Love 💕</a>
         </div>
     </div>
 </body>
