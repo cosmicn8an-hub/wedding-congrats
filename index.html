@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karen</title>
+    <title>Congratulations Karen!</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
         
         * {
             margin: 0;
@@ -14,8 +14,8 @@
         }
         
         body {
-            font-family: 'Crimson Text', serif;
-            background: linear-gradient(135deg, #8B4A8C 0%, #D2527F 25%, #F4A261 50%, #E76F51 75%, #2A9D8F 100%);
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, #ffb6c1 0%, #ffc0cb 25%, #ff69b4 50%, #ff1493 75%, #dc143c 100%);
             background-size: 400% 400%;
             animation: gradientShift 15s ease infinite;
             min-height: 100vh;
@@ -32,13 +32,13 @@
             100% { background-position: 0% 50%; }
         }
         
-        /* Elegant floating elements */
+        /* Floating wedding elements */
         .ornament {
             position: absolute;
-            opacity: 0.3;
+            opacity: 0.4;
             animation: float 8s ease-in-out infinite;
-            color: #F4A261;
-            font-size: 24px;
+            color: #ff69b4;
+            font-size: 28px;
         }
         
         .ornament:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
@@ -59,18 +59,15 @@
         .container {
             max-width: 900px;
             margin: 30px;
-            background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
-            border-radius: 30px;
-            box-shadow: 
-                0 25px 50px rgba(139, 74, 140, 0.3),
-                0 10px 25px rgba(231, 111, 81, 0.2),
-                inset 0 1px 0 rgba(255,255,255,0.8);
-            padding: 80px 60px;
-            text-align: center;
-            position: relative;
-            border: 2px solid transparent;
-            background-clip: padding-box;
+            background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(255,192,203,0.85));
             backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 60px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(255,105,180,0.3), inset 0 1px 0 rgba(255,255,255,0.6);
+            border: 2px solid rgba(255,182,193,0.3);
+            position: relative;
+            z-index: 1;
         }
         
         .container::before {
@@ -80,167 +77,145 @@
             left: -2px;
             right: -2px;
             bottom: -2px;
-            background: linear-gradient(45deg, #8B4A8C, #D2527F, #F4A261, #E76F51, #2A9D8F);
-            border-radius: 32px;
+            background: linear-gradient(45deg, #ff69b4, #ffc0cb, #ff1493, #ffb6c1);
+            border-radius: 25px;
             z-index: -1;
-            animation: borderGlow 6s ease-in-out infinite;
+            animation: borderGlow 3s ease-in-out infinite alternate;
         }
         
         @keyframes borderGlow {
-            0%, 100% { opacity: 0.6; }
-            50% { opacity: 1; }
-        }
-        
-        .container::after {
-            content: '';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            right: 20px;
-            bottom: 20px;
-            background-image: 
-                radial-gradient(circle at 25% 25%, rgba(139, 74, 140, 0.1) 0%, transparent 40%),
-                radial-gradient(circle at 75% 75%, rgba(231, 111, 81, 0.1) 0%, transparent 40%),
-                radial-gradient(circle at 50% 50%, rgba(244, 162, 97, 0.05) 0%, transparent 60%);
-            border-radius: 20px;
-            z-index: -1;
+            0% { opacity: 0.5; }
+            100% { opacity: 0.8; }
         }
         
         h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
-            font-weight: 700;
-            color: #8B4A8C;
-            margin-bottom: 40px;
-            text-shadow: 
-                2px 2px 4px rgba(139, 74, 140, 0.2),
-                0 0 20px rgba(244, 162, 97, 0.3);
+            font-family: 'Dancing Script', cursive;
+            font-size: 4em;
+            color: #d63384;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(255,105,180,0.3);
             position: relative;
-            line-height: 1.2;
-        }
-        
-        h1::before,
-        h1::after {
-            content: '❦';
-            position: absolute;
-            top: 50%;
-            font-size: 2rem;
-            color: #E76F51;
-            animation: sparkle 3s ease-in-out infinite;
         }
         
         h1::before {
+            content: '💕';
+            position: absolute;
             left: -60px;
-            animation-delay: 0s;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.7em;
+            animation: heartbeat 2s ease-in-out infinite;
         }
         
         h1::after {
+            content: '💕';
+            position: absolute;
             right: -60px;
-            animation-delay: 1.5s;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.7em;
+            animation: heartbeat 2s ease-in-out infinite 1s;
         }
         
-        @keyframes sparkle {
-            0%, 100% { transform: translateY(-50%) scale(1) rotate(0deg); opacity: 0.7; }
-            50% { transform: translateY(-50%) scale(1.2) rotate(180deg); opacity: 1; }
-        }
-        
-        .subtitle {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            font-style: italic;
-            color: #2A9D8F;
-            margin-bottom: 50px;
-            font-weight: 300;
-            letter-spacing: 2px;
+        @keyframes heartbeat {
+            0%, 100% { transform: translateY(-50%) scale(1); }
+            50% { transform: translateY(-50%) scale(1.2); }
         }
         
         .message {
-            font-family: 'Crimson Text', serif;
-            font-size: 1.3rem;
+            font-size: 1.3em;
             line-height: 1.8;
-            color: #5D4E75;
+            color: #6f42c1;
             margin-bottom: 40px;
-            text-align: justify;
-            text-justify: inter-word;
-            font-weight: 400;
+            padding: 30px;
+            background: rgba(255,182,193,0.2);
+            border-radius: 15px;
+            border-left: 5px solid #ff69b4;
+        }
+        
+        .rings {
+            font-size: 3em;
+            margin: 30px 0;
+            animation: ringRotate 4s linear infinite;
+        }
+        
+        @keyframes ringRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .flowers {
+            font-size: 2em;
+            margin: 20px 0;
+            opacity: 0.8;
         }
         
         .signature {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            margin-top: 40px;
             font-style: italic;
-            color: #8B4A8C;
-            margin-top: 50px;
-            font-weight: 400;
+            color: #8b5a8c;
+            font-size: 1.1em;
         }
         
-        .decorative-line {
-            width: 200px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #D2527F, #F4A261, #E76F51, transparent);
-            margin: 30px auto;
-            border-radius: 2px;
-            animation: lineGlow 4s ease-in-out infinite;
-        }
-        
-        @keyframes lineGlow {
-            0%, 100% { box-shadow: 0 0 5px rgba(210, 82, 127, 0.3); }
-            50% { box-shadow: 0 0 15px rgba(210, 82, 127, 0.7); }
-        }
-        
+        /* Responsive design */
         @media (max-width: 768px) {
             .container {
-                margin: 20px;
-                padding: 50px 30px;
+                margin: 15px;
+                padding: 40px 30px;
             }
             
             h1 {
-                font-size: 3rem;
+                font-size: 2.5em;
             }
             
             h1::before,
             h1::after {
-                display: none;
-            }
-            
-            .subtitle {
-                font-size: 1.4rem;
+                font-size: 0.6em;
+                left: -40px;
+                right: -40px;
             }
             
             .message {
-                font-size: 1.1rem;
-                text-align: center;
+                font-size: 1.1em;
+                padding: 20px;
+            }
+            
+            .ornament {
+                font-size: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="ornament">❋</div>
-    <div class="ornament">✦</div>
-    <div class="ornament">❅</div>
-    <div class="ornament">✧</div>
-    <div class="ornament">❈</div>
-    <div class="ornament">✤</div>
-    <div class="ornament">❉</div>
-    <div class="ornament">✥</div>
+    <!-- Floating wedding ornaments -->
+    <div class="ornament">💐</div>
+    <div class="ornament">💒</div>
+    <div class="ornament">🌹</div>
+    <div class="ornament">💎</div>
+    <div class="ornament">🌸</div>
+    <div class="ornament">💍</div>
+    <div class="ornament">🥂</div>
+    <div class="ornament">🎀</div>
     
     <div class="container">
-        <h1>Karen</h1>
-        <div class="decorative-line"></div>
-        <p class="subtitle">Celebrating Your Special Day</p>
+        <h1>Congratulations Karen!</h1>
         
-        <p class="message">
-            On this beautiful day, we celebrate not just a wedding, but the beginning of a wonderful new chapter in your life. 
-            May your journey together be filled with endless love, joy, and all the happiness your heart can hold. 
-            Your grace, wisdom, and warmth have touched so many lives, and today we honor the love that has brought you 
-            to this perfect moment.
-        </p>
+        <div class="rings">💍💍</div>
         
-        <div class="decorative-line"></div>
+        <div class="message">
+            <p>🌹 Wishing you a lifetime of love, happiness, and beautiful adventures together! 🌹</p>
+            <br>
+            <p>Don't worry about work while you're away - we've got everything covered here. Focus on making amazing memories and enjoying every moment of your special time!</p>
+            <br>
+            <p>Have an absolutely wonderful cruise and honeymoon! May this be the start of your greatest adventure yet. 🚢✨</p>
+        </div>
         
-        <p class="signature">
-            With love and warmest wishes
-        </p>
+        <div class="flowers">🌺 🌻 🌷 🌺 🌻 🌷</div>
+        
+        <div class="signature">
+            With love and best wishes,<br>
+            Your Work Family 💕
+        </div>
     </div>
 </body>
 </html>
