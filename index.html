@@ -1,1 +1,287 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Congratulations!</title><style>body { font-family: Arial, sans-serif; background: #f6f6f6; margin: 0; padding: 40px; }.container { max-width: 600px; background: white; margin: auto; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px #bbb; }h1 { color: #4a90e2;}p { font-size: 1.2em; }</style></head><body><div class="container"><h1>Congratulations Karen!</h1><p>Hope you have an amazing holiday and celebration.<br>Don't worry about things at work—<b>I've got the fort covered!</b> (Or at least, I'll try—you know how my group is!)<br><br>And remember, pace yourselves on the cruise! 🚢🍹 The drinks are endless, but your liver isn't! 😄<br><br>Enjoy every minute. Wishing you both happiness, Joy, and a well-deserved break!</p><footer><p>— Nathan</p></footer></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Congratulations Karen! 💕</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@300;400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 25%, #fd79a8 50%, #e84393 75%, #a29bfe 100%);
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 30px;
+            animation: float 8s infinite ease-in-out;
+            opacity: 0.7;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.95);
+            margin: 40px auto;
+            padding: 60px 50px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 2;
+            border: 3px solid transparent;
+            background-clip: padding-box;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, #ffeaa7, #fd79a8, #e84393, #a29bfe);
+            border-radius: 28px;
+            z-index: -1;
+        }
+        
+        .floral-decoration {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
+            animation: gentle-sway 3s ease-in-out infinite;
+        }
+        
+        @keyframes gentle-sway {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5em;
+            color: #e84393;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(45deg, #fd79a8, #e84393, #a29bfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 2s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.2); }
+        }
+        
+        .rings {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+            animation: ring-glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes ring-glow {
+            0%, 100% { 
+                transform: scale(1);
+                filter: drop-shadow(0 0 5px #ffd700);
+            }
+            50% { 
+                transform: scale(1.1);
+                filter: drop-shadow(0 0 15px #ffd700);
+            }
+        }
+        
+        p {
+            font-size: 1.3em;
+            line-height: 1.8;
+            color: #2d3436;
+            text-align: center;
+            margin: 25px 0;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+        }
+        
+        .highlight {
+            background: linear-gradient(45deg, #ffeaa7, #fd79a8);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: 600;
+            color: #2d3436;
+            box-shadow: 0 2px 8px rgba(253, 121, 168, 0.3);
+        }
+        
+        .cruise-section {
+            background: linear-gradient(135deg, rgba(255, 234, 167, 0.3), rgba(253, 121, 168, 0.3));
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 2px solid rgba(232, 67, 147, 0.2);
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 10px rgba(232, 67, 147, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(232, 67, 147, 0.5); }
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(232, 67, 147, 0.2);
+        }
+        
+        footer p {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8em;
+            color: #e84393;
+            font-weight: 600;
+        }
+        
+        .sparkle {
+            display: inline-block;
+            animation: sparkle 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            25% { transform: scale(1.2) rotate(90deg); }
+            50% { transform: scale(1) rotate(180deg); }
+            75% { transform: scale(1.2) rotate(270deg); }
+        }
+        
+        .celebration-banner {
+            text-align: center;
+            font-size: 1.5em;
+            margin: 30px 0;
+            animation: celebration-bounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes celebration-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 40px 30px;
+            }
+            
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            p {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts" id="floating-hearts"></div>
+    
+    <div class="container">
+        <div class="floral-decoration">🌹🌸🌺🌸🌹</div>
+        
+        <h1>Congratulations Karen!</h1>
+        
+        <div class="rings">💍💍</div>
+        
+        <div class="celebration-banner">
+            <span class="sparkle">✨</span> Hope you have an amazing holiday and celebration! <span class="sparkle">✨</span>
+        </div>
+        
+        <p>
+            Don't worry about things at work—<span class="highlight">I've got the fort covered!</span> 
+            (Or at least, I'll try—you know how my group is!)
+        </p>
+        
+        <div class="cruise-section">
+            <p>
+                And remember, pace yourselves on the cruise! 🚢🍹 The drinks are endless, but your liver isn't! 😄
+            </p>
+        </div>
+        
+        <p>
+            Enjoy every minute. Wishing you both happiness, joy, and a well-deserved break!
+        </p>
+        
+        <div class="floral-decoration">🌹🌸🌺🌸🌹</div>
+        
+        <footer>
+            <p>— Nathan 💕</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Create floating hearts animation
+        const heartsContainer = document.getElementById('floating-hearts');
+        const heartEmojis = ['💕', '💖', '💝', '💗'];
+        
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDelay = Math.random() * 8 + 's';
+            heart.style.animationDuration = (Math.random() * 3 + 6) + 's';
+            
+            heartsContainer.appendChild(heart);
+            
+            // Remove heart after animation
+            setTimeout(() => {
+                if (heart.parentNode) {
+                    heart.parentNode.removeChild(heart);
+                }
+            }, 10000);
+        }
+        
+        // Create hearts periodically
+        setInterval(createHeart, 1500);
+        
+        // Create initial hearts
+        for (let i = 0; i < 5; i++) {
+            setTimeout(createHeart, i * 300);
+        }
+    </script>
+</body>
+</html>
