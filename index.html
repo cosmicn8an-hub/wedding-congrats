@@ -2,25 +2,202 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Congratulations!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Congratulations</title>
     <style>
-        body { font-family: Arial, sans-serif; background: #f6f6f6; margin: 0; padding: 40px; }
-        .container { max-width: 600px; background: white; margin: auto; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px #bbb; }
-        h1 { color: #4a90e2;}
-        p { font-size: 1.2em; }
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #f8e8ff 50%, #fff0f5 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Floating hearts animation */
+        .heart {
+            position: absolute;
+            color: #ff69b4;
+            opacity: 0.6;
+            animation: float 6s ease-in-out infinite;
+            font-size: 20px;
+        }
+        
+        .heart:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .heart:nth-child(2) { top: 20%; right: 15%; animation-delay: 1s; }
+        .heart:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 2s; }
+        .heart:nth-child(4) { bottom: 10%; right: 10%; animation-delay: 3s; }
+        .heart:nth-child(5) { top: 60%; left: 5%; animation-delay: 4s; }
+        .heart:nth-child(6) { top: 40%; right: 5%; animation-delay: 5s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(255, 105, 180, 0.2);
+            padding: 60px 50px;
+            text-align: center;
+            position: relative;
+            border: 3px solid transparent;
+            background-clip: padding-box;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, #ff69b4, #ff1493, #dc143c, #ff69b4);
+            border-radius: 25px;
+            z-index: -1;
+        }
+        
+        .wedding-rings {
+            font-size: 60px;
+            margin-bottom: 30px;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            color: #8b0045;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(139, 0, 69, 0.1);
+            line-height: 1.2;
+        }
+        
+        .couple-names {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5em;
+            color: #ff1493;
+            margin: 30px 0;
+            font-weight: 700;
+        }
+        
+        .message {
+            font-size: 1.3em;
+            line-height: 1.8;
+            color: #555;
+            margin: 40px 0;
+            font-weight: 300;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #ff69b4 0%, #ff1493 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 400;
+        }
+        
+        .decorative-border {
+            width: 200px;
+            height: 3px;
+            background: linear-gradient(to right, #ff69b4, #ff1493, #ff69b4);
+            margin: 30px auto;
+            border-radius: 2px;
+        }
+        
+        .flowers {
+            font-size: 24px;
+            margin: 20px 0;
+            letter-spacing: 10px;
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8em;
+            color: #8b0045;
+            margin-top: 40px;
+            font-weight: 400;
+        }
+        
+        .wishes {
+            background: linear-gradient(135deg, #fff0f5, #ffeef8);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 5px solid #ff69b4;
+            font-style: italic;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 40px 30px;
+            }
+            
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .couple-names {
+                font-size: 2em;
+            }
+            
+            .message {
+                font-size: 1.1em;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Floating hearts -->
+    <div class="heart">💕</div>
+    <div class="heart">💖</div>
+    <div class="heart">💝</div>
+    <div class="heart">💗</div>
+    <div class="heart">💕</div>
+    <div class="heart">💖</div>
+    
     <div class="container">
-        <h1>Congratulations on Your Wedding!</h1>
-        <p>
-            Hope you have an amazing holiday and celebration.<br>
-            Don't worry about things at work—<b>I've got the fort covered!</b> (Or at least, I'll try—you know how my group is!)<br><br>
-            Enjoy every minute. Wishing you both happiness, Joy, and a well-deserved break!
-        </p>
-        <footer>
-            <p>— Nathan</p>
-        </footer>
+        <div class="wedding-rings">💍💍</div>
+        
+        <h1>Congratulations</h1>
+        
+        <div class="couple-names">On Your Beautiful Wedding!</div>
+        
+        <div class="flowers">🌹 🌸 🌺 🌸 🌹</div>
+        
+        <div class="decorative-border"></div>
+        
+        <div class="message">
+            Hope you have an <span class="highlight">amazing holiday and celebration</span>.
+            Don't worry about things at work—<strong>I've got the fort covered!</strong> 
+            (Or at least, I'll try—you know how my group is!)
+        </div>
+        
+        <div class="wishes">
+            <p>Enjoy every minute. Wishing you both <span class="highlight">happiness, joy, and a well-deserved break!</span></p>
+            <p>May your love story be filled with endless chapters of joy, laughter, and beautiful memories.</p>
+        </div>
+        
+        <div class="decorative-border"></div>
+        
+        <div class="flowers">🌷 🌼 🌻 🌼 🌷</div>
+        
+        <div class="signature">— Nathan</div>
     </div>
 </body>
 </html>
