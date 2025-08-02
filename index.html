@@ -65,81 +65,88 @@
             left: -3px;
             right: -3px;
             bottom: -3px;
-            background: linear-gradient(45deg, #ff69b4, #ff1493, #ffc0cb, #ff69b4);
+            background: linear-gradient(45deg, #ff69b4, #ff1493, #ff69b4, #ffb6c1);
             border-radius: 25px;
             z-index: -1;
         }
         
         .wedding-rings {
-            font-size: 3em;
-            margin-bottom: 20px;
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+            font-size: 4em;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 4px 8px rgba(255, 105, 180, 0.3));
         }
         
         h1 {
             font-family: 'Dancing Script', cursive;
             font-size: 4em;
-            color: #d63384;
+            color: #c2185b;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            font-weight: 700;
         }
         
         .couple-names {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            color: #6f42c1;
-            margin-bottom: 30px;
+            font-size: 2.2em;
+            color: #880e4f;
+            margin: 15px 0;
             font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
         
         .flowers {
-            font-size: 2em;
-            margin: 20px 0;
+            font-size: 2.5em;
+            margin: 30px 0;
+            filter: drop-shadow(0 2px 4px rgba(255, 105, 180, 0.2));
         }
         
         .decorative-border {
             height: 3px;
-            background: linear-gradient(90deg, transparent, #ff69b4, #ff1493, #ff69b4, transparent);
-            margin: 30px auto;
-            width: 60%;
+            background: linear-gradient(to right, transparent, #ff69b4, #ff1493, #ff69b4, transparent);
+            margin: 30px 0;
             border-radius: 2px;
         }
         
         .message {
             font-size: 1.3em;
-            line-height: 1.6;
-            color: #495057;
-            margin: 30px 0;
-            font-weight: 300;
-        }
-        
-        .wishes {
-            font-size: 1.2em;
             line-height: 1.8;
-            color: #6c757d;
-            margin: 30px 0;
-        }
-        
-        .wishes p {
-            margin-bottom: 15px;
+            color: #4a4a4a;
+            margin: 40px 0;
+            font-weight: 300;
+            text-align: left;
+            background: linear-gradient(135deg, #faf0e6 0%, #fff5ee 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #ff69b4;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.1);
         }
         
         .highlight {
-            color: #d63384;
+            background: linear-gradient(120deg, #ff69b4 0%, #ffb6c1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             font-weight: 600;
+        }
+        
+        .wishes {
+            font-style: italic;
+            color: #666;
+            margin: 40px 0;
+            font-size: 1.2em;
+            line-height: 1.7;
+        }
+        
+        .wishes p {
+            margin-bottom: 20px;
         }
         
         .signature {
             font-family: 'Dancing Script', cursive;
             font-size: 2em;
-            color: #6f42c1;
+            color: #c2185b;
             margin-top: 40px;
-            font-style: italic;
+            font-weight: 700;
         }
         
         /* Responsive design */
@@ -177,7 +184,7 @@
         
         <h1>Congratulations</h1>
         
-        <div class="couple-names">Karen & [Partner's Name]</div>
+        <div class="couple-names">Karen & Mike</div>
         <div class="couple-names">On Your Beautiful Wedding!</div>
         
         <div class="flowers">🌹 🌸 🌺 🌸 🌹</div>
@@ -190,7 +197,7 @@
             (Or at least, I'll try—you know how my group is!)
             <br><br>
             And remember, pace yourselves on the cruise! 🚢🍹 
-            The buffets are endless, but your liver isn't! 😄
+            The drinks are endless, but your liver isn't! 😄
         </div>
         
         <div class="wishes">
