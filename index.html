@@ -23,14 +23,12 @@
             line-height: 1.6;
         }
         
-        /* Container for responsive layout */
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
         
-        /* Main content styling */
         .main-content {
             text-align: center;
             padding: 40px 20px;
@@ -57,36 +55,29 @@
         .message {
             font-size: 1.2rem;
             color: #831843;
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto 40px;
             line-height: 1.8;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 2px solid #f9a8d4;
         }
         
-        /* Button styling with proper touch targets */
-        .cta-button {
+        .ring-decoration {
+            font-size: 2rem;
+            color: #fbbf24;
+            margin: 0 10px;
             display: inline-block;
-            background: linear-gradient(135deg, #ec4899, #be185d);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
-            min-height: 44px;
-            min-width: 44px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+            animation: sparkle 2s infinite ease-in-out;
         }
         
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
         }
         
-        /* Floating Hearts Animation */
         .floating-hearts {
             position: fixed;
             top: 0;
@@ -130,139 +121,14 @@
             }
         }
         
-        /* Mobile-first responsive design */
         @media screen and (max-width: 768px) {
-            body {
-                font-size: 16px;
-            }
-            
-            .container {
-                padding: 15px;
-            }
-            
-            .main-content {
-                padding: 30px 15px;
-            }
-            
             h1 {
                 font-size: 2.5rem;
-                margin-bottom: 20px;
-                line-height: 1.2;
-            }
-            
-            .subtitle {
-                font-size: 1.2rem;
-                margin-bottom: 30px;
             }
             
             .message {
                 font-size: 1.1rem;
-                margin-bottom: 30px;
-                padding: 0 10px;
-            }
-            
-            .cta-button {
-                padding: 18px 35px;
-                font-size: 1rem;
-                min-height: 48px;
-                min-width: 120px;
-            }
-            
-            .heart {
-                font-size: 16px;
-            }
-        }
-        
-        @media screen and (max-width: 480px) {
-            body {
-                font-size: 14px;
-            }
-            
-            .container {
-                padding: 10px;
-            }
-            
-            .main-content {
-                padding: 20px 10px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-                margin-bottom: 15px;
-            }
-            
-            .subtitle {
-                font-size: 1rem;
-                margin-bottom: 25px;
-            }
-            
-            .message {
-                font-size: 1rem;
-                margin-bottom: 25px;
-                line-height: 1.6;
-            }
-            
-            .cta-button {
-                padding: 20px 40px;
-                font-size: 0.9rem;
-                min-height: 50px;
-                border-radius: 25px;
-                width: 100%;
-                max-width: 280px;
-            }
-            
-            .heart {
-                font-size: 14px;
-            }
-        }
-        
-        @media screen and (max-width: 320px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-            
-            .subtitle {
-                font-size: 0.9rem;
-            }
-            
-            .message {
-                font-size: 0.9rem;
-            }
-            
-            .cta-button {
-                padding: 18px 30px;
-                font-size: 0.85rem;
-            }
-        }
-        
-        /* Landscape orientation adjustments */
-        @media screen and (max-height: 500px) and (orientation: landscape) {
-            .main-content {
-                padding: 20px 15px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-                margin-bottom: 15px;
-            }
-            
-            .subtitle {
-                font-size: 1rem;
-                margin-bottom: 20px;
-            }
-            
-            .message {
-                font-size: 0.9rem;
-                margin-bottom: 20px;
-            }
-        }
-        
-        /* High DPI display support */
-        @media screen and (-webkit-min-device-pixel-ratio: 2),
-               screen and (min-resolution: 192dpi) {
-            .cta-button {
-                border: none;
-                outline: none;
+                padding: 20px;
             }
         }
     </style>
@@ -281,13 +147,13 @@
     <div class="container">
         <div class="main-content">
             <h1>Congratulations Karen!</h1>
+            <div class="ring-decoration">💍</div>
             <p class="subtitle">On Your Beautiful Wedding Day</p>
-            <p class="message">
-                Wishing you and your partner a lifetime filled with love, laughter, and endless happiness. 
-                May your journey together be as beautiful as the love you share today. 
-                Here's to new beginnings, cherished moments, and a future bright with promise!
-            </p>
-            <a href="#" class="cta-button">Send Your Love 💕</a>
+            <div class="ring-decoration">💍</div>
+            
+            <div class="message">
+                Congratulations Karen! Hope you have an amazing holiday and celebration. Don't worry about things at work—I've got the fort covered! (Or at least, I'll try—you know how my group is!) And remember, pace yourselves on the cruise! 🚢🍹 The drinks are endless, but your liver isn't! 😄 Enjoy every minute. Wishing you both happiness, joy, and a well-deserved break! — Nathan
+            </div>
         </div>
     </div>
 </body>
