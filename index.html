@@ -65,79 +65,80 @@
             left: -3px;
             right: -3px;
             bottom: -3px;
-            background: linear-gradient(45deg, #ff69b4, #ff1493, #dc143c, #ff69b4);
+            background: linear-gradient(45deg, #ff69b4, #ff1493, #ffc0cb, #ff69b4);
             border-radius: 25px;
             z-index: -1;
         }
         
         .wedding-rings {
-            font-size: 60px;
-            margin-bottom: 30px;
-            color: #ffd700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
         }
         
         h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5em;
-            color: #8b0045;
+            font-family: 'Dancing Script', cursive;
+            font-size: 4em;
+            color: #d63384;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(139, 0, 69, 0.1);
-            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
         
         .couple-names {
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Playfair Display', serif;
             font-size: 2.5em;
-            color: #ff1493;
-            margin: 30px 0;
+            color: #6f42c1;
+            margin-bottom: 30px;
             font-weight: 700;
+        }
+        
+        .flowers {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        
+        .decorative-border {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ff69b4, #ff1493, #ff69b4, transparent);
+            margin: 30px auto;
+            width: 60%;
+            border-radius: 2px;
         }
         
         .message {
             font-size: 1.3em;
-            line-height: 1.8;
-            color: #555;
-            margin: 40px 0;
+            line-height: 1.6;
+            color: #495057;
+            margin: 30px 0;
             font-weight: 300;
         }
         
+        .wishes {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #6c757d;
+            margin: 30px 0;
+        }
+        
+        .wishes p {
+            margin-bottom: 15px;
+        }
+        
         .highlight {
-            background: linear-gradient(120deg, #ff69b4 0%, #ff1493 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 400;
-        }
-        
-        .decorative-border {
-            width: 200px;
-            height: 3px;
-            background: linear-gradient(to right, #ff69b4, #ff1493, #ff69b4);
-            margin: 30px auto;
-            border-radius: 2px;
-        }
-        
-        .flowers {
-            font-size: 24px;
-            margin: 20px 0;
-            letter-spacing: 10px;
+            color: #d63384;
+            font-weight: 600;
         }
         
         .signature {
             font-family: 'Dancing Script', cursive;
-            font-size: 1.8em;
-            color: #8b0045;
+            font-size: 2em;
+            color: #6f42c1;
             margin-top: 40px;
-            font-weight: 400;
-        }
-        
-        .wishes {
-            background: linear-gradient(135deg, #fff0f5, #ffeef8);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 30px 0;
-            border-left: 5px solid #ff69b4;
             font-style: italic;
         }
         
@@ -176,6 +177,7 @@
         
         <h1>Congratulations</h1>
         
+        <div class="couple-names">Karen & [Partner's Name]</div>
         <div class="couple-names">On Your Beautiful Wedding!</div>
         
         <div class="flowers">🌹 🌸 🌺 🌸 🌹</div>
@@ -183,9 +185,12 @@
         <div class="decorative-border"></div>
         
         <div class="message">
-            Hope you have an <span class="highlight">amazing holiday and celebration</span>.
+            Hope you have an <span class="highlight">amazing holiday and celebration</span>!
             Don't worry about things at work—<strong>I've got the fort covered!</strong> 
             (Or at least, I'll try—you know how my group is!)
+            <br><br>
+            And remember, pace yourselves on the cruise! 🚢🍹 
+            The buffets are endless, but your liver isn't! 😄
         </div>
         
         <div class="wishes">
